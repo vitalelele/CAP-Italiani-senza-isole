@@ -11,7 +11,7 @@ with open("isoleminori.txt", "r") as isole:
     cap_isole = [item.replace(",\n", "") for item in isole]
 print(cap_isole)
 
-cap_senza_isole = [item for item in cap_italiani if item not in cap_isole]
+cap_senza_isole = [item.replace(",", "") for item in cap_italiani if item not in cap_isole]
 print(cap_senza_isole)
 
 # se volessi creare un file txt con i CAP
